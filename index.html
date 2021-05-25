@@ -7,11 +7,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-	<link rel="stylesheet" type="text/css" href="css/owl.transitions.css"/>
-	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css"/>
-	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
-	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bundle.css"/>
 
 
 	<script type="text/javascript" src="js/jquery.js"></script>
@@ -294,6 +290,24 @@
 		<p class="copyright animated wow fadeIn" data-wow-duration="2s"> <strong>Pixelhint</strong>
 	</footer>
 	<!--  End Footer Section  -->
+<script type="text/javascript">
+const loadStyleSheet = src => {
+if(document.createStylesheet) {
+	document.createStylesheet(src)
+} else {
+	const stylesheet = document.createElement('link');
+	stylesheet.href = src;
+	stylesheet.type = 'text/css';
+	stylesheet.rel = 'stylesheet'
+	document.getElementsByTagName('head')[0].appendChild(stylesheet)
+}
+};
 
+window.onload = function() {
+	console.log('window done!');
+	loadStyleSheet('./css/main_below.css');
+
+};
+</script>
 </body>
 </html>
